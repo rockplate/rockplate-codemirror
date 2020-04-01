@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "target": "es5",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "lib": ["esnext", "DOM"],
+    "outDir": "./dist",
+    "declaration": true,
+    "declarationDir": "types",
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/**/*"]
+}

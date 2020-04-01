@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
+    <title>Rockplate CodeMirror</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.51.0/lib/codemirror.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.51.0/addon/lint/lint.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.51.0/addon/fold/foldgutter.css " />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.51.0/theme/dracula.css" />
+    <link rel="stylesheet" href="demo/assets/styles.css" />
+    <script type="text/javascript">
+      function switchContent(type) {
+        var types = ['template', 'result', 'schema', 'params'];
+        for (var i = 0; i < types.length; i++) {
+          document.body.classList.remove('active-content-' + types[i]);
+        }
+        document.body.classList.add('active-content-' + type);
+      }
+    </script>
+  </head>
+  <body class="active-content-template">
+    <div class="section-container">
+      <div class="section-header">
+        <a class="content-switch switch-template " href="#" onclick="switchContent('template')">Code</a>
+        <a class="content-switch switch-result" href="#" onclick="switchContent('result')">Output</a>
+        <a class="content-switch switch-schema" href="#" onclick="switchContent('schema')">Schema</a>
+        <a class="content-switch switch-params" href="#" onclick="switchContent('params')">Params</a>
+      </div>
+      <div class="section-body">
+        <div class="content-wrapper template-wrapper">
+          <div id="demo-template"></div>
+        </div>
+        <div class="content-wrapper result-wrapper">
+          <div id="demo-result"></div>
+        </div>
+        <div class="content-wrapper schema-wrapper">
+          <div class="strict-toggle"><input type="checkbox" id="demo-strict-toggle" /> Strict</div>
+          <div class="schema-content" id="demo-schema"></div>
+        </div>
+        <div class="content-wrapper params-wrapper">
+          <div id="demo-params"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/codemirror@5.51.0/lib/codemirror.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.51.0/lib/codemirror.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.52.0/addon/fold/foldcode.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.52.0/addon/fold/foldgutter.js"></script>
+
+    <script src="https://unpkg.com/jsonlint@1.6.3/web/jsonlint.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.52.0/addon/lint/lint.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.52.0/addon/lint/json-lint.js"></script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/codemirror@5.52.0/addon/fold/indent-fold.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.52.0/addon/fold/brace-fold.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.52.0/addon/fold/xml-fold.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.52.0/addon/fold/indent-fold.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/codemirror@5.52.0/addon/fold/comment-fold.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/codemirror@5.51.0/addon/mode/simple.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.51.0/mode/javascript/javascript.js"></script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/codemirror@5.52.0/addon/mode/overlay.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/codemirror@5.52.0/mode/xml/xml.js"></script> -->
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/rockplate@latest/dist/umd/rockplate.js"></script>
+    <script type="text/javascript" src="dist/rockplate-codemirror.js"></script>
+    <script type="text/javascript" src="demo/assets/demo.js"></script>
+  </body>
+</html>

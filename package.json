@@ -1,0 +1,36 @@
+{
+  "name": "rockplate-codemirror",
+  "version": "1.0.0-pre.1",
+  "description": "CodeMirror implementation for Rockplate Language",
+  "main": "dist/rockplate-codemirror.min.js",
+  "types": "types/index.d.ts",
+  "files": [
+    "/dist",
+    "/types",
+    "/index.html",
+    "/demo"
+  ],
+  "scripts": {
+    "prepare": "npm run build",
+    "lint": "tslint -p tsconfig.json",
+    "prebuild": "rimraf dist",
+    "build": "webpack --env=production",
+    "watch": "webpack --env=development"
+  },
+  "author": "Safraz Razik",
+  "license": "MIT",
+  "dependencies": {
+    "codemirror": "^5.52.2",
+    "rockplate": "^1.0.0-pre.10"
+  },
+  "devDependencies": {
+    "@types/codemirror": "0.0.88",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.2",
+    "ts-loader": "^6.2.1",
+    "tslint": "^6.0.0",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11"
+  }
+}

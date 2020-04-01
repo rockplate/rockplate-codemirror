@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+body {
+  background: #333;
+  color: #eee;
+}
+
+/* SECTIONS */
+
+.section-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.section-header {
+  position: absolute;
+  top: 0;
+  height: 2rem;
+  bottom: 2rem;
+  left: 0;
+  right: 0;
+}
+
+.section-header,
+.schema-wrapper .strict-toggle {
+  background: #fff;
+  background: #111;
+}
+
+.content-switch {
+  font-size: 1rem;
+  line-height: 2rem;
+  color: #4299e1;
+  text-decoration: none;
+  display: block;
+  padding: 0 0.5rem;
+  float: left;
+}
+
+.switch-template {
+  padding-left: 1rem;
+}
+
+.section-body {
+  position: absolute;
+  top: 2rem;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.template-wrapper,
+.result-wrapper,
+.schema-wrapper,
+.params-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+  overflow-y: auto;
+}
+
+.result-wrapper {
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.schema-wrapper .strict-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 2rem;
+  left: 0;
+  height: 2rem;
+  padding-left: 1rem;
+}
+
+.schema-wrapper .schema-content {
+  position: absolute;
+  top: 2rem;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.active-content-template .template-wrapper,
+.active-content-result .result-wrapper,
+.active-content-schema .schema-wrapper,
+.active-content-params .params-wrapper {
+  visibility: visible;
+}
+
+.active-content-template .switch-template,
+.active-content-result .switch-result,
+.active-content-schema .switch-schema,
+.active-content-params .switch-params {
+  color: #aaa;
+  font-weight: bold;
+}
+
+.template-wrapper .CodeMirror,
+.schema-wrapper .CodeMirror,
+.params-wrapper .CodeMirror {
+  position: absolute;
+  height: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@media (min-width: 640px) {
+  .template-wrapper {
+    right: 50%;
+    visibility: visible !important;
+  }
+
+  .switch-template {
+    width: 50% !important;
+    color: #aaa !important;
+    font-weight: normal !important;
+  }
+
+  .switch-result {
+    padding-left: 1rem;
+  }
+
+  .result-wrapper,
+  .schema-wrapper,
+  .params-wrapper {
+    left: 50%;
+  }
+  .active-content-template .result-wrapper {
+    visibility: visible;
+  }
+
+  .active-content-template .switch-result {
+    color: #aaa;
+    font-weight: bold;
+  }
+
+  .switch-template,
+  .template-wrapper {
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+  }
+}
+
+.cm-s-dracula span.cm-keyword {
+  color: #f0f;
+}
+
+.cm-s-dracula span.cm-atom {
+  color: #f4c20b;
+}
+
+.cm-s-dracula span.cm-tag {
+  color: #aaa;
+}
+
+.cm-s-dracula span.cm-variable-2 {
+  color: #66d9ef;
+}
