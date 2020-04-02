@@ -18,6 +18,10 @@ import { register } from 'rockplate-codemirror';
 register(CodeMirror);
 ```
 
+Usage with `<script>` tag:
+
 ```html
 <script src="https://cdn.jsdelivr.net/npm/rockplate-codemirror@latest/dist/rockplate-codemirror.min.js"></script>
 ```
+
+Registered automatically 

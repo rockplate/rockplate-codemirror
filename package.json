@@ -21,7 +21,7 @@
   "license": "MIT",
   "dependencies": {
     "codemirror": "^5.52.2",
-    "rockplate": "^1.0.0-pre.10"
+    "rockplate": "^1.0.0-pre.12"
   },
   "devDependencies": {
     "@types/codemirror": "0.0.88",

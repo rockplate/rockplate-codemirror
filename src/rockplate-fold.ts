@@ -1,20 +1,12 @@
 import { CodeMirrorType } from './helper';
-import { Builder, IfBlock, RepeatBlock, CommentBlock } from 'rockplate';
+import { Utils, Builder, IfBlock, RepeatBlock, CommentBlock } from 'rockplate';
 
 const getLines = (text: string) => {
-  return text
-    .split('\r\n')
-    .join('\r')
-    .split('\n')
-    .join('\r')
-    .split('\r');
+  return Utils.getLines(text);
 };
 
 const getPosition = (text: string, offset: number) => {
-  const lines = getLines(text.substr(0, offset + 1));
-  const line = lines.length;
-  const column = lines[lines.length - 1].length - 1;
-  return { line, column: column === -1 ? 0 : column };
+  return Utils.getPositionAt(text, offset);
 };
 
 export const register = (CodeMirror: CodeMirrorType) => {
@@ -52,7 +44,7 @@ export const register = (CodeMirror: CodeMirrorType) => {
     const offsetEnd = block.offsetEnd - block.expressionEnd.length;
     const positionEnd = getPosition(text, offsetEnd);
     const lineEnd = positionEnd.line - 1;
-    const endLineText = cm.getLine(lineEnd) || '';
+    // const endLineText = cm.getLine(lineEnd) || '';
 
     if (lineEnd - start.line < 1) {
       return undefined;
