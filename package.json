@@ -1,6 +1,6 @@
 {
   "name": "rockplate-codemirror",
-  "version": "1.0.0-pre.2",
+  "version": "1.0.0-pre.3",
   "description": "CodeMirror implementation for Rockplate Language",
   "main": "dist/rockplate-codemirror.min.js",
   "types": "types/index.d.ts",
