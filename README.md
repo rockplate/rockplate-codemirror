@@ -7,6 +7,8 @@
 
 CodeMirror implementation for Rockplate language
 
+## [Live Demo](https://rockplate.github.io/rockplate-codemirror/)
+
 ## Usage
 
 `npm install rockplate-codemirror`
@@ -24,4 +26,4 @@ Usage with `<script>` tag:
 <script src="https://cdn.jsdelivr.net/npm/rockplate-codemirror@latest/dist/rockplate-codemirror.min.js"></script>
 ```
 
-Registered automatically 
+Registered automatically
