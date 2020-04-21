@@ -9,6 +9,12 @@ CodeMirror implementation for Rockplate language
 
 ## [Live Demo](https://rockplate.github.io/rockplate-codemirror/)
 
+## Features
+
+- Syntax highlighting - `rockplate` mode
+- Linting support
+- Code folding support
+
 ## Usage
 
 `npm install rockplate-codemirror`
